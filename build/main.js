@@ -5,33 +5,33 @@ let meaningofLife;
 let loading;
 // it must be any type 
 let album;
-// union type 
+// union type =======
 let arr;
 let postId;
 let isActive;
-// regular exprestions 
+// regular exprestions =======
 let re = /\w+/g;
 username = 'jithin';
 meaningofLife = 298;
 loading = true;
-//function withh argumnet type difine 
+//function withh argumnet type difine =========
 const sum = (a, b) => {
     return a + b;
 };
 sum(5, 20);
 // =================== CHAPTER 3 ==============================
-// Array 
+// Array ==========
 let test = []; // any type with array 
 let brand = []; // only string type array
 brand.push('bmw', 'audi');
 let bandId = [1234, 347123, 743695]; // only number type array
-// Tuple ==> it use the specific position 
+// Tuple ==> it use the specific position ==========
 let myTyple = ['dave', 23, true]; //Tuple type
 let mixed = ['jithin', 34, false]; // union type 
 mixed = myTyple; // we can assign tuple ==> union type 
 // myTyple = mixed   // but we can't assign  union type  === tuple
 myTyple[1] = 47;
-// Object 
+// Object  ===========
 let myObj;
 // we can define two ways 
 myObj = []; //object
@@ -77,7 +77,7 @@ const greetStudent = (student) => {
     }
 };
 // console.log(greetStudent(stu1));
-// Enums
+// Enums =========
 // unlike most typescript feature , Enums are not a type-level additional to js but somthing added to the language and runtime 
 var Grad;
 (function (Grad) {
@@ -89,4 +89,11 @@ var Grad;
     Grad[Grad["A"] = 6] = "A";
     Grad[Grad["R"] = 7] = "R";
 })(Grad || (Grad = {}));
-console.log(Grad);
+// interface Post_Id =  stringOrNumber  // erorr cant use it aliases in interface 
+// Literal type ==========
+// only assign the its own same value eg:
+let myName;
+// myName = 'raju'  // erorr
+let usernames;
+username = 'anni';
+// Functions ==========

@@ -7,13 +7,15 @@ let loading : boolean;
  // it must be any type 
 let album : any ;
 
-// union type 
+// union type =======
+
 let arr : number | string | boolean
 let postId : number | string 
 let isActive : number | boolean 
 
 
-// regular exprestions 
+// regular exprestions =======
+
 let re : RegExp = /\w+/g
 
 
@@ -21,7 +23,7 @@ username = 'jithin'
 meaningofLife = 298
 loading = true
 
-//function withh argumnet type difine 
+//function withh argumnet type difine =========
 
 const sum =(a :number , b : number)=> {
     return a + b
@@ -33,14 +35,14 @@ sum(5, 20);
 // =================== CHAPTER 3 ==============================
 
 
-// Array 
+// Array ==========
 
 let test = []  // any type with array 
 let brand: string[] = []  // only string type array
 brand.push('bmw' ,'audi')
 let bandId : number[] = [1234 , 347123, 743695] // only number type array
 
-// Tuple ==> it use the specific position 
+// Tuple ==> it use the specific position ==========
 
 let myTyple : [string , number , boolean] = ['dave', 23 , true] //Tuple type
 
@@ -53,7 +55,8 @@ myTyple[1] = 47
 
 
 
-// Object 
+// Object  ===========
+
 let myObj : object 
 // we can define two ways 
 myObj = [] //object
@@ -72,7 +75,7 @@ const exampleObj ={
 // exampleObj.props2 = 34 // error
 exampleObj.props2 = false
 
-// type
+// type  ========
 
 type Gitarist ={
     name : string ,
@@ -97,7 +100,7 @@ let person2 : Gitarist ={
 // console.log(person1);
 
 
-// ?   
+// ?   ========
 
 type amimal ={
     name:string ,
@@ -117,7 +120,7 @@ const greetGritarist = (gtarisht : Gitarist)=>{
 }
 // console.log(greetGritarist(person1))
       
-// interface  == this same as type 
+// interface  == this same as type  ===========
 interface Student {
     name?:string, 
     is_acive : boolean 
@@ -140,7 +143,8 @@ const greetStudent =(student : Student)=>{
 // console.log(greetStudent(stu1));
 
 
-// Enums
+// Enums =========
+
 // unlike most typescript feature , Enums are not a type-level additional to js but somthing added to the language and runtime 
 
 enum Grad {
@@ -153,4 +157,35 @@ enum Grad {
     A,
     R,
 }
-console.log(Grad);
+// console.log(Grad);
+
+
+// =================== CHAPTER 4 ==============================
+
+// Type Aliases ==========
+
+type  stringOrNumber = string | number
+type stringOrNumberArray = (string | number )[]
+
+type Employee = {
+    name: string ,
+    emp_id : stringOrNumber ,
+    album : stringOrNumberArray
+}
+
+type user_id = stringOrNumber
+
+// interface Post_Id =  stringOrNumber  // erorr cant use it aliases in interface 
+
+
+// Literal type ==========
+
+// only assign the its own same value eg:
+let myName :'jithin'
+// myName = 'raju'  // erorr
+let usernames : 'raju' | 'niyas' | 'anni'
+username = 'anni'
+
+// Functions ==========
+
+
