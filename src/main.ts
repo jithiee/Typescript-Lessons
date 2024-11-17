@@ -112,19 +112,45 @@ let lion ={
 // pass an object as an argument in a function 
 
 const greetGritarist = (gtarisht : Gitarist)=>{
-      console.log(`hello ${gtarisht.name}`);
+      return (`hello ${gtarisht.name}`);
 
 }
-greetGritarist(person1)
+// console.log(greetGritarist(person1))
       
 // interface  == this same as type 
 interface Student {
-    name:string,
-    age: number , 
+    name?:string, 
     is_acive : boolean 
 }
 
+let stu1: Student = {
+    name: 'ravi',
+    is_acive: true
+  
+}
+const greetStudent =(student : Student)=>{
+    // return `hello ${student.name?.toUpperCase()}`  // if not name value it will show undefinde so this handle with if conition 
+    if(student.name){
+
+        return `hello ${student.name.toUpperCase()}`
+    }else{
+        return 'hellooo'
+    }
+}
+// console.log(greetStudent(stu1));
 
 
+// Enums
+// unlike most typescript feature , Enums are not a type-level additional to js but somthing added to the language and runtime 
 
+enum Grad {
+    // it start 1 to so on if i chage the U vale 3 it start with 3  
 
+    U = 3 , 
+    // U , 
+    D,
+    B,
+    A,
+    R,
+}
+console.log(Grad);

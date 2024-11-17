@@ -61,6 +61,32 @@ let lion = {
 };
 // pass an object as an argument in a function 
 const greetGritarist = (gtarisht) => {
-    console.log(`hello ${gtarisht.name}`);
+    return (`hello ${gtarisht.name}`);
 };
-greetGritarist(person1);
+let stu1 = {
+    name: 'ravi',
+    is_acive: true
+};
+const greetStudent = (student) => {
+    // return `hello ${student.name?.toUpperCase()}`  // if not name value it will show undefinde so this handle with if conition 
+    if (student.name) {
+        return `hello ${student.name.toUpperCase()}`;
+    }
+    else {
+        return 'hellooo';
+    }
+};
+// console.log(greetStudent(stu1));
+// Enums
+// unlike most typescript feature , Enums are not a type-level additional to js but somthing added to the language and runtime 
+var Grad;
+(function (Grad) {
+    // it start 1 to so on if i chage the U vale 3 it start with 3  
+    Grad[Grad["U"] = 3] = "U";
+    // U , 
+    Grad[Grad["D"] = 4] = "D";
+    Grad[Grad["B"] = 5] = "B";
+    Grad[Grad["A"] = 6] = "A";
+    Grad[Grad["R"] = 7] = "R";
+})(Grad || (Grad = {}));
+console.log(Grad);
