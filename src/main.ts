@@ -188,4 +188,73 @@ username = 'anni'
 
 // Functions ==========
 
+const add = (a : number , b : number): number =>{
+       return a + b
 
+}
+// console.log(add(3, 5));
+
+// void ===
+const logMsg = (message: any): void =>{
+    console.log(message );    
+}
+// logMsg('heeloww')
+// logMsg(add(3, 50))
+
+// =======
+const subscration = function (c:number , d: number): 
+number{
+   return c - d
+} 
+// console.log(subscration(10 , 5));
+
+//========
+
+
+// type mathFunctin = (a: number , b : number) => number 
+interface mathFunctin {
+    (a : number , b : number ): number
+}
+
+let multy: mathFunctin = function ( c ,d ){
+    return c * d
+}
+
+// logMsg(multy(500 , 5))
+
+// optional  parameters  =======
+
+const addAll = (a: number , b: number , c?: number): number =>{
+    if( c !== undefined){
+        return a + b + c
+    }else{
+        return a + b 
+    }
+
+}
+
+// console.log(addAll(2, 4 ,3));
+// console.log(addAll(2, 4 ));
+
+
+// default value parameter =======
+
+const sumAll = (a : number = 10 , b : number , c: number = 2): number =>{
+    return a+ b+ c
+}
+// console.log(sumAll(2, 5,10));
+// console.log(sumAll(1, 5));
+// console.log(sumAll(undefined , 5));
+
+// Rest parameters ====
+
+const totaOafArray = (...nums: number[]): number =>{
+   return nums.reduce((prev, curr) => prev + curr)
+}
+console.log(totaOafArray(1,2,3,4)) // we no need to the arrgument [1,2,3,4] like this 
+
+//default value with Rest parameters ====
+const total = ( a:number, ...nums: number[]): number =>{
+    return a + nums.reduce((prev, curr) => prev + curr)
+ }
+ console.log(total(10 ,2,3))

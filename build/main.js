@@ -97,3 +97,49 @@ let myName;
 let usernames;
 username = 'anni';
 // Functions ==========
+const add = (a, b) => {
+    return a + b;
+};
+// console.log(add(3, 5));
+// void ===
+const logMsg = (message) => {
+    console.log(message);
+};
+// logMsg('heeloww')
+// logMsg(add(3, 50))
+// =======
+const subscration = function (c, d) {
+    return c - d;
+};
+let multy = function (c, d) {
+    return c * d;
+};
+// logMsg(multy(500 , 5))
+// optional  parameters  =======
+const addAll = (a, b, c) => {
+    if (c !== undefined) {
+        return a + b + c;
+    }
+    else {
+        return a + b;
+    }
+};
+// console.log(addAll(2, 4 ,3));
+// console.log(addAll(2, 4 ));
+// default value parameter =======
+const sumAll = (a = 10, b, c = 2) => {
+    return a + b + c;
+};
+// console.log(sumAll(2, 5,10));
+// console.log(sumAll(1, 5));
+// console.log(sumAll(undefined , 5));
+// Rest parameters ====
+const totaOafArray = (...nums) => {
+    return nums.reduce((prev, curr) => prev + curr);
+};
+console.log(totaOafArray(1, 2, 3, 4)); // we no need to the arrgument [1,2,3,4] like this 
+//default value with Rest parameters ====
+const total = (a, ...nums) => {
+    return a + nums.reduce((prev, curr) => prev + curr);
+};
+console.log(total(10, 2, 3));
