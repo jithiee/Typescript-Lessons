@@ -251,10 +251,55 @@ const sumAll = (a : number = 10 , b : number , c: number = 2): number =>{
 const totaOafArray = (...nums: number[]): number =>{
    return nums.reduce((prev, curr) => prev + curr)
 }
-console.log(totaOafArray(1,2,3,4)) // we no need to the arrgument [1,2,3,4] like this 
+// console.log(totaOafArray(1,2,3,4)) // we no need to the arrgument [1,2,3,4] like this 
 
 //default value with Rest parameters ====
 const total = ( a:number, ...nums: number[]): number =>{
     return a + nums.reduce((prev, curr) => prev + curr)
  }
- console.log(total(10 ,2,3))
+//  console.log(total(10 ,2,3))
+
+ // union type in parameter 
+// never type 
+//  const numberOrString = (value: number | string):  1:37:00
+//  string =>{
+//      if ( typeof value == 'string')  return  'string'
+//      if ( typeof value == 'number')  return  'number'
+//  }  
+
+// return boolean 
+// custome type 
+const is_number = (value:any ):
+boolean =>{
+    return  typeof value == 'number' ? true : false
+}
+// console.log(is_number('5'));
+// console.log(is_number(5));
+
+
+// =================== CHAPTER 5 ==============================
+
+// type Assertion or type Casting   =====
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
