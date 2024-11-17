@@ -143,8 +143,8 @@ const total = (a, ...nums) => {
     return a + nums.reduce((prev, curr) => prev + curr);
 };
 //  console.log(total(10 ,2,3))
-// union type in parameter 
-// never type 
+// union type in parameter ======
+// never type ======
 //  const numberOrString = (value: number | string):  1:37:00
 //  string =>{
 //      if ( typeof value == 'string')  return  'string'
@@ -155,7 +155,16 @@ const total = (a, ...nums) => {
 const is_number = (value) => {
     return typeof value == 'number' ? true : false;
 };
-// console.log(is_number('5'));
-// console.log(is_number(5));
-// =================== CHAPTER 5 ==============================
-// type Assertion or type Casting   =====
+let a = "hello";
+let b = a;
+console.log(b);
+let c = b;
+const addOrConcat = (a, b, c) => {
+    if (c === 'add')
+        return a + b;
+    return '' + a + b;
+};
+let myVal = addOrConcat(2, 2, 'concat');
+console.log(myVal);
+console.log(typeof myVal);
+// =================== CHAPTER 6 ==============================

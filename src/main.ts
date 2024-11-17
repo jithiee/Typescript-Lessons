@@ -259,8 +259,9 @@ const total = ( a:number, ...nums: number[]): number =>{
  }
 //  console.log(total(10 ,2,3))
 
- // union type in parameter 
-// never type 
+ // union type in parameter ======
+// never type ======
+
 //  const numberOrString = (value: number | string):  1:37:00
 //  string =>{
 //      if ( typeof value == 'string')  return  'string'
@@ -281,6 +282,25 @@ boolean =>{
 
 // type Assertion or type Casting   =====
 
+type One = string 
+type Two = string | number 
+type Three = 'hello'
+
+let a:One = "hello" 
+let b = a as  Two
+console.log(b);
+let c = b as Three
+
+const addOrConcat = (a : number , b: number , c: 'add' | 'concat' ): 
+string | number =>{
+    if(c === 'add') return a + b 
+    return '' + a + b 
+ }
+let myVal: string = addOrConcat(2,2 ,'concat') as string
+console.log(myVal);
+console.log(typeof myVal);
+
+// =================== CHAPTER 6 ==============================
 
 
 
