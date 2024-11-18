@@ -157,7 +157,7 @@ const is_number = (value) => {
 };
 let a = "hello";
 let b = a;
-console.log(b);
+// console.log(b);
 let c = b;
 const addOrConcat = (a, b, c) => {
     if (c === 'add')
@@ -165,6 +165,9 @@ const addOrConcat = (a, b, c) => {
     return '' + a + b;
 };
 let myVal = addOrConcat(2, 2, 'concat');
-console.log(myVal);
-console.log(typeof myVal);
+// console.log(myVal);
+// console.log(typeof myVal);
 // =================== CHAPTER 6 ==============================
+//class 
+// ================skiped = becouse i useing functional component for react js and next js ============
+// =================== CHAPTER 7 ==============================

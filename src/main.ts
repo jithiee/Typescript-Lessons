@@ -297,10 +297,13 @@ string | number =>{
     return '' + a + b 
  }
 let myVal: string = addOrConcat(2,2 ,'concat') as string
-console.log(myVal);
-console.log(typeof myVal);
+// console.log(myVal);
+// console.log(typeof myVal);
 
 // =================== CHAPTER 6 ==============================
+//class 
+// ================skiped = becouse i useing functional component for react js and next js ============
+// =================== CHAPTER 7 ==============================
 
 
 
